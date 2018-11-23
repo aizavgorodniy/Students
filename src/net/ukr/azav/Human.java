@@ -4,12 +4,14 @@ public class Human implements Comparable{
     private String name;
     private String surname;
     private int age;
+    private String sex;
 
-    public Human(String name, String surname, int age) {
+    public Human(String name, String surname, int age, String sex) {
         super();
         this.name = name;
         this.surname = surname;
         this.age = age;
+        this.sex = sex;
 
     }
 
@@ -41,9 +43,17 @@ public class Human implements Comparable{
         this.age = age;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.name = sex;
+    }
+
     @Override
     public String toString() {
-        return "name=" + name + ", surname=" + surname + ", age=" + age;
+        return "name=" + name + ", surname=" + surname + ", age=" + age + " sex=" + sex;
     }
 
     @Override
@@ -54,7 +64,7 @@ public class Human implements Comparable{
             return true;
         if (obj.getClass() == this.getClass()) {
             Human human = (Human) obj;
-            if (human.name  == this.name && human.surname == this.surname && human.age == this.age) {
+            if (human.name  == this.name && human.surname == this.surname && human.age == this.age && human.sex == this.sex) {
                 return true;
 
             }

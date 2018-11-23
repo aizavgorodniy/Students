@@ -4,13 +4,13 @@ public class Student extends Human {
 
     private double averageMark;
 
-    public Student(String name, String surname, int age, double averageMark) {
-        super(name, surname, age);
+    public Student(String name, String surname, int age, String sex, double averageMark) {
+        super(name, surname, age, sex);
         this.averageMark = averageMark;
     }
 
-    public Student(String name, String surname, int age, int height, double weight) {
-        super(name, surname, age);
+    public Student(String name, String surname, int age, String sex) {
+        super(name, surname, age, sex);
     }
 
     public double getAverageMark() {
